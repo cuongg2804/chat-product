@@ -22,7 +22,7 @@ const routersClient = require("./router/client/index.router");
 
 //Flash
 app.use(cookieParser('keyboard cat'));
-app.use(session({ cookie: { maxAge: 1000000 }}));
+app.use(session({ cookie: { maxAge: 100000000000 }}));
 app.use(flash());
 //End Flash
 
