@@ -6,7 +6,7 @@ const roomChat = require ("./room-chat.router");
 //const chatMiddlewares = require("../../middlewares/chat.middlewares");
 
 module.exports = (app) =>{
-    //app.use("/", homeChat);
+    app.use("/", homeChat);
 
     app.use("/user", userRouter);
 
