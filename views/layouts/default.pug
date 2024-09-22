@@ -4,6 +4,10 @@ html
     title #{pageTitle}
     link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css")
+   
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css")
+    link(rel="stylesheet"  href="https://unpkg.com/file-upload-with-preview@6.1.2/dist/style.css")
+    
     link(rel="stylesheet", href="/css/style.css")
 
   body
@@ -17,10 +21,26 @@ html
     script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js") 
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js")
 
-    //Socket
-    script(src="/socket.io/socket.io.js")
-    script(src="/js/socket.io.js")
-    
+
     //EndSocket
 
-    script(src="/js/script.js")
+    //Emoj-picker
+    script(type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js")
+   
+    //End emoji - picker
+
+    //Upload image
+    script(type="module"  src="https://unpkg.com/file-upload-with-preview@6.1.2/dist/index.js")
+    //End Upload image
+
+    //Viewer-image
+    script(type="module" src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js")
+    //End Viewer-image
+
+    script(type="module" src="/js/script.js")
+
+        //Socket
+    script(src="/socket.io/socket.io.js")
+    script( src="/js/socket.io.js")
+    script(type="module" src="/js/user.js")
+

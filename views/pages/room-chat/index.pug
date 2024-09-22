@@ -1,0 +1,34 @@
+extends ../../layouts/default.pug
+include ../../mixins/box_head.pug
+
+block main
+  include ../../partials/list-btn-users.pug
+
+  .container.my-3
+    .row
+      .col-12
+        +box_head("Danh sách phòng")
+
+    .row.mb-3
+      .col-12
+        a(
+          href="/rooms-chat/create"
+          class="btn btn-sm btn-success mr-1"
+        ) Tạo phòng chat
+
+    .row
+      each room in Rooms
+        .col-6
+          div(class="box-room")
+            div(class="inner-avatar")
+              img(
+                src="https://robohash.org/hicveldicta.png"
+                alt="Phòng abc"
+              )
+            div(class="inner-info")
+              div(class="inner-name") #{room.dataRoom.title}
+              div(class="inner-buttons")
+                a(
+                  href=`/rooms-chat/${room.room_chat_id}`
+                  class="btn btn-sm btn-primary mr-1"
+                ) Nhắn tin

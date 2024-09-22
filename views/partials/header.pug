@@ -6,9 +6,18 @@ header.header
       .col-25
         .inner-menu
           ul
+           
+            if(user)
+              li
+                a(href="/rooms-chat") Phòng chat
+              li
+                a #{user.fullName}
               li
                 a(href="/user/logout") Đăng xuất
-              //- li
-              //-   a(href="/user/login") Đăng nhập
+
+              
+            else
+              li
+                a(href="/user/login") Đăng nhập
               //- li
               //-   a(href="/user/register") Đăng ký
